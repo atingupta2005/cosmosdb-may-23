@@ -5,3 +5,5 @@ choco install azure-cosmosdb-emulator -y
 choco install vscode -y
 choco install microsoftazurestorageexplorer -y
 choco install visualstudio2022community -y
+choco install dotnet-6.0-sdk
+choco install dotnetcore-3.1-sdk
