@@ -1,0 +1,1 @@
+Install-Package chocolatey -Confirm:$False -Force
