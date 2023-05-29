@@ -16,13 +16,13 @@ variable "environment" {
 variable "resoure_group_name" {
   description = "Resource Group Name"
   type = string
-  default = "rgvmswin"
+  default = "rgvmswins1"
 }
 # 4. Resource Group Location
 variable "resoure_group_location" {
   description = "Resource Group Location"
   type = string
-  default = "East US"
+  default = "East US2"
 }
 
 # 5. Virtual Network Name
@@ -58,5 +58,5 @@ variable "storage_account_type" {
 variable "vm_count" {
   description = "How many VMs"
   type = number
-  default = "1"
+  default = "10"
 }
