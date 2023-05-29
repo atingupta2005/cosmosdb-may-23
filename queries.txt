@@ -1,6 +1,14 @@
 module-04.ipynb
  -  Implement optimistic concurrency control
+	- Do write code
 
+Discuss security benchmarks:
+https://github.com/MicrosoftDocs/SecurityBenchmarks/blob/master/Azure%20Offer%20Security%20Baselines/3.0/azure-cosmos-db-azure-security-benchmark-v3-latest-security-baseline.xlsx
+https://github.com/MicrosoftDocs/SecurityBenchmarks/blob/master/Azure%20Offer%20Security%20Baselines/3.0/azure-cosmos-db-for-postgresql-azure-security-benchmark-v3-latest-security-baseline.xlsx
+
+Why 2 baselines for Cosmos Postgres vs Cosmos DB security?
+
+Dedicated Gateway for Caching
 Implement security
 Supported APIs
 Backup
@@ -10,6 +18,8 @@ Configure logging
 cross-document transactional operations
 change feed
 Implement a non-relational data model
+
+How to raise the change feed event and use it for backup and restore?
 
 - Move data internally from one container to another without any external service (Data Factory), Without changing container name
 - Done:
