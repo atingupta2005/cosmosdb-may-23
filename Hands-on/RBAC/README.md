@@ -17,8 +17,8 @@ Secret: b0.8Q~AL_3pqoPLAqWMxR7MW28GQLWYaP6cVoaEZ
 
 ### Open Azure CLI and run below commands
 ```
-subscription_id="Pay as you go - 1"
-az account set --subscription $subscription_id
+subscription_id="Pay as you go - 2"
+az account set --subscription "$subscription_id"
 ```
 
 ### Create a file named myrole.json and put below content in it
