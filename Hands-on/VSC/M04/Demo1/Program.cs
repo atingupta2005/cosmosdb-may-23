@@ -1,10 +1,13 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 using System.Configuration;
 using System.Collections.Generic;
 using System.Net;
 using Microsoft.Azure.Cosmos;
 using System.Reflection.Metadata;
+using System.Collections;
+using System.Collections.Concurrent;
+using Azure;
 
 namespace TheCloudShopsLoader
 {
@@ -65,7 +68,8 @@ namespace TheCloudShopsLoader
             await this.CreateContainerAsync();
 
             //run seed method to load initial data
-            await this.AddItemsToContainerAsync();
+            //await this.AddItemsToContainerAsync();
+            await this.updateOrderByID();
         }
 
         /// <summary>
@@ -134,6 +138,70 @@ namespace TheCloudShopsLoader
 
         }
 
+
+        private async Task updateOrderByID()
+        {
+            //this.updateOrderByID1();
+            //this.updateOrderByID2();
+            this.updateOrderByID3();
+        }
+
+        private async Task updateOrderByID1()
+        {
+            string city = "Seattle";
+            PartitionKey partitionKey = new(city);
+
+            Order order = await container.ReadItemAsync<Order>("847", partitionKey);
+
+            order.Description = "Changed 1";
+
+            await container.UpsertItemAsync<Order>(order, partitionKey);
+        }
+
+        private async Task updateOrderByID2()
+        {
+            string city = "Seattle";
+            PartitionKey partitionKey = new(city);
+            
+            ItemResponse<Order> response = await container.ReadItemAsync<Order>("847", partitionKey);
+
+            Order order = response.Resource;
+
+            string eTag = response.ETag;
+
+            // To prevent lost updates, you can use the if-match rule to see if the ETag still matches the current ETag header of the item server-side as part of your update request.
+            ItemRequestOptions options = new ItemRequestOptions { IfMatchEtag = eTag };
+
+            order.Description = "Changed 2";
+
+            await container.UpsertItemAsync<Order>(order, partitionKey, requestOptions: options);
+        }
+
+        private async Task updateOrderByID3()
+        {
+            string city = "Seattle";
+            PartitionKey partitionKey = new(city);
+
+            // Let's see if we can break the ETag
+            ItemResponse<Order> response1 = await container.ReadItemAsync<Order>("847", partitionKey);
+            ItemResponse<Order> response2 = await container.ReadItemAsync<Order>("847", partitionKey);
+
+            Order order1 = response1.Resource;
+            Order order2 = response2.Resource;
+
+            string eTag1 = response1.ETag;
+            string eTag2 = response2.ETag;
+            order1.Description = "Change 3 - 1";
+            order2.Description = "Change 3 - 2";
+
+            ItemRequestOptions options1 = new ItemRequestOptions { IfMatchEtag = eTag1 };
+            ItemRequestOptions options2 = new ItemRequestOptions { IfMatchEtag = eTag2 };
+
+            await container.UpsertItemAsync<Order>(order1, partitionKey, requestOptions: options1);
+
+            await container.UpsertItemAsync<Order>(order2, partitionKey, requestOptions: options2);
+
+        }
 
 
         /// <summary>
