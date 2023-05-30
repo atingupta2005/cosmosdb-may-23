@@ -60,6 +60,7 @@ readOnlyRoleDefinitionId="00000000-0000-0000-0000-000000000001"
 
 ### Show the details of the role created
 ```
+role_id="00000000-0000-0000-0000-000000000001"
 az cosmosdb sql role definition show --account-name $accountName --resource-group $resourceGroupName --id $role_id
 ```
 
