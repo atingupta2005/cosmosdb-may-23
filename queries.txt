@@ -1,30 +1,34 @@
+Module 09:
+ Failover Manual and Auto
+
+
+How to raise the change feed event and use it for backup and restore?
+
+
+Log analysis for understanding the right consistency level. And also understand by logs that due to wrong consistency are we ending up paying higher cost and need to lower the consistency or vice versa
+
+Admin of Cosmos
+ - How to create user accounts
+ - Day to admin activities
+ - 
+
+--------Done-----------
 module-04.ipynb
  -  Implement optimistic concurrency control
 	- Do write code
 
-Discuss security benchmarks:
-https://github.com/MicrosoftDocs/SecurityBenchmarks/blob/master/Azure%20Offer%20Security%20Baselines/3.0/azure-cosmos-db-azure-security-benchmark-v3-latest-security-baseline.xlsx
-https://github.com/MicrosoftDocs/SecurityBenchmarks/blob/master/Azure%20Offer%20Security%20Baselines/3.0/azure-cosmos-db-for-postgresql-azure-security-benchmark-v3-latest-security-baseline.xlsx
-
-Why 2 baselines for Cosmos Postgres vs Cosmos DB security?
-
-Dedicated Gateway for Caching
-Implement security
-Supported APIs
-Backup
-Handle connection errors
-Implement threading and parallelism
-Configure logging
-cross-document transactional operations
-change feed
-Implement a non-relational data model
-
-How to raise the change feed event and use it for backup and restore?
+RBAC in Cosmos
 
 - Move data internally from one container to another without any external service (Data Factory), Without changing container name
 - Done:
 	- https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/cosmos/azure-cosmos-spark_3_2-12/Samples/DatabricksLiveContainerMigration
 
+
+
+Why PITR not working?
+
+Dedicated Gateway for Caching
+Implement security
 - Also if is it possible to specify multiple column names as partition key
 	- Done: No
 	- Refer to:  https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/synthetic-partition-keys
@@ -37,8 +41,8 @@ How to kill session forcibly by admin for some running cosmos db transactions
 Which File system is used in Cosmos DB. Need to know to understand the replication process of Cosmos DB.
  - Done: No mentioned in Documentation
 
-Log analysis for understanding the right consistency level. And also understand by logs that due to wrong consistency are we ending up paying higher cost and need to lower the consistency or vice versa
-
+Supported APIs
+Backup
 
 Pass data to query:
 SELECT TOP 10 p.id, p.name, t.name AS tag, p.price FROM products p JOIN t IN p.tags WHERE p.price >= @lower AND p.price <= @upper
@@ -48,7 +52,21 @@ Equivalant in UI SQL of Cosmos DB?
  - Done: Cosmos DB SQL Studio
 
 
-Admin of Cosmos
- - How to create user accounts
- - Day to admin activities
- - 
+
+------ Nice to have---------
+Handle connection errors
+Implement threading and parallelism
+Configure logging
+cross-document transactional operations
+change feed
+
+Sanity checks after PITR is done. Can prepare checklist before releasing to the team.
+
+
+Discuss security benchmarks:
+https://github.com/MicrosoftDocs/SecurityBenchmarks/blob/master/Azure%20Offer%20Security%20Baselines/3.0/azure-cosmos-db-azure-security-benchmark-v3-latest-security-baseline.xlsx
+https://github.com/MicrosoftDocs/SecurityBenchmarks/blob/master/Azure%20Offer%20Security%20Baselines/3.0/azure-cosmos-db-for-postgresql-azure-security-benchmark-v3-latest-security-baseline.xlsx
+
+Why 2 baselines for Cosmos Postgres vs Cosmos DB security?
+
+
