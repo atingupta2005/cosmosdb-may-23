@@ -1,7 +1,6 @@
 Module 09:
  Failover Manual and Auto
 
-
 How to raise the change feed event and use it for backup and restore?
 
 
