@@ -1,0 +1,18 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "WEBSITE_SLOT_NAME": "Production",
+    "kirandb_DOCUMENTDB": "AccountEndpoint=https://kirandb.documents.azure.com:443/;AccountKey=Eu9QTLXO3gtuIe6MRGryhOXRNw5kd6LTfOsd3PMgKYsjoAMWI6R13dnoFKKFdwfinexoNONPwAg2ACDbEYNQXA==;",
+    "FUNCTIONS_EXTENSION_VERSION": "~4",
+    "ScmType": "None",
+    "WEBSITE_AUTH_ENABLED": "False",
+    "APPLICATIONINSIGHTS_CONNECTION_STRING": "InstrumentationKey=d2e29641-a5cb-455d-8406-9d99d9e52df6;IngestionEndpoint=https://westus-0.in.applicationinsights.azure.com/;LiveEndpoint=https://westus.livediagnostics.monitor.azure.com/",
+    "kiranmay22_STORAGE": "DefaultEndpointsProtocol=https;AccountName=kiranmay22;AccountKey=PqwsDIKWAfD0wj/7HydPGl+q5fKM2JdjupcfgD47QX1Y7S+FfUImw1I4rOFB0HmfumktpwFevJ1h+AStQrLrKw==",
+    "APPINSIGHTS_INSTRUMENTATIONKEY": "d2e29641-a5cb-455d-8406-9d99d9e52df6",
+    "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "DefaultEndpointsProtocol=https;AccountName=rgatin84ac;AccountKey=0rTUzlMsVCdZExA8C5SPVEgoeflPBR23tDM16DQoGgq7T7FTzLCE15QFvYSvAVnyH0LWxv3BuB41+AStGPfesg==;EndpointSuffix=core.windows.net",
+    "WEBSITE_CONTENTSHARE": "facosmosagmay23ac8f",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "WEBSITE_SITE_NAME": "facosmosagmay23",
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=rgatin84ac;AccountKey=0rTUzlMsVCdZExA8C5SPVEgoeflPBR23tDM16DQoGgq7T7FTzLCE15QFvYSvAVnyH0LWxv3BuB41+AStGPfesg==;EndpointSuffix=core.windows.net"
+  }
+}

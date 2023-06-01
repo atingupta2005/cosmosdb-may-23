@@ -1,0 +1,21 @@
+﻿{
+  "bindings": [
+    {
+      "name": "input",
+      "connectionStringSetting": "kirandb_DOCUMENTDB",
+      "databaseName": "DP420Demo",
+      "collectionName": "TheCloudShops",
+      "leaseCollectionName": "leases",
+      "createLeaseCollectionIfNotExists": true,
+      "direction": "in",
+      "type": "cosmosDBTrigger"
+    },
+    {
+      "name": "outputBlob",
+      "path": "outcontainer/{sys.utcnow}.json",
+      "connection": "kiranmay22_STORAGE",
+      "direction": "out",
+      "type": "blob"
+    }
+  ]
+}

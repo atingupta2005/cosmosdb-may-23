@@ -1,62 +1,14 @@
-Module 09:
- Failover Manual and Auto
-
 How to raise the change feed event and use it for backup and restore?
-
+https://willvelida.medium.com/performing-backups-in-azure-cosmos-db-3812d8e1ce22
 
 Log analysis for understanding the right consistency level. And also understand by logs that due to wrong consistency are we ending up paying higher cost and need to lower the consistency or vice versa
 
-Admin of Cosmos
- - How to create user accounts
- - Day to admin activities
- - 
-
 --------Done-----------
-module-04.ipynb
- -  Implement optimistic concurrency control
-	- Do write code
-
-RBAC in Cosmos
-
-- Move data internally from one container to another without any external service (Data Factory), Without changing container name
-- Done:
-	- https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/cosmos/azure-cosmos-spark_3_2-12/Samples/DatabricksLiveContainerMigration
-
-
-
-Why PITR not working?
-
-Dedicated Gateway for Caching
-Implement security
-- Also if is it possible to specify multiple column names as partition key
-	- Done: No
-	- Refer to:  https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/synthetic-partition-keys
-- 
-
 How to kill session forcibly by admin for some running cosmos db transactions
  - Done: Not feasible
  - Refer:  https://learn.microsoft.com/en-us/answers/questions/685588/how-to-view-cosmos-database-active-connection-in-a
 
-Which File system is used in Cosmos DB. Need to know to understand the replication process of Cosmos DB.
- - Done: No mentioned in Documentation
-
-Supported APIs
-Backup
-
-Pass data to query:
-SELECT TOP 10 p.id, p.name, t.name AS tag, p.price FROM products p JOIN t IN p.tags WHERE p.price >= @lower AND p.price <= @upper
- - Done: Only possible in query languages
- 
-Equivalant in UI SQL of Cosmos DB?
- - Done: Cosmos DB SQL Studio
-
-
-
 ------ Nice to have---------
-Handle connection errors
-Implement threading and parallelism
-Configure logging
-cross-document transactional operations
 change feed
 
 Sanity checks after PITR is done. Can prepare checklist before releasing to the team.
