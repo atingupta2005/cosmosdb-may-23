@@ -1,7 +1,9 @@
-How to raise the change feed event and use it for backup and restore?
-https://willvelida.medium.com/performing-backups-in-azure-cosmos-db-3812d8e1ce22
+Data Factory to Github
 
-Log analysis for understanding the right consistency level. And also understand by logs that due to wrong consistency are we ending up paying higher cost and need to lower the consistency or vice versa
+Cognitive Search
+
+Sanity checks after PITR is done. Can prepare checklist before releasing to the team.
+
 
 --------Done-----------
 How to kill session forcibly by admin for some running cosmos db transactions
@@ -11,9 +13,6 @@ How to kill session forcibly by admin for some running cosmos db transactions
 ------ Nice to have---------
 change feed
 
-Sanity checks after PITR is done. Can prepare checklist before releasing to the team.
-
-
 Discuss security benchmarks:
 https://github.com/MicrosoftDocs/SecurityBenchmarks/blob/master/Azure%20Offer%20Security%20Baselines/3.0/azure-cosmos-db-azure-security-benchmark-v3-latest-security-baseline.xlsx
 https://github.com/MicrosoftDocs/SecurityBenchmarks/blob/master/Azure%20Offer%20Security%20Baselines/3.0/azure-cosmos-db-for-postgresql-azure-security-benchmark-v3-latest-security-baseline.xlsx
@@ -21,3 +20,4 @@ https://github.com/MicrosoftDocs/SecurityBenchmarks/blob/master/Azure%20Offer%20
 Why 2 baselines for Cosmos Postgres vs Cosmos DB security?
 
 
+Log analysis for understanding the right consistency level. And also understand by logs that due to wrong consistency are we ending up paying higher cost and need to lower the consistency or vice versa

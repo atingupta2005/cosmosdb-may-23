@@ -1,13 +1,20 @@
+<<<<<<< HEAD
 using System;
+=======
+﻿using System;
+>>>>>>> 08fc415ff562b93786de30ef5f65f4c624c04ce5
 using System.Threading.Tasks;
 using System.Configuration;
 using System.Collections.Generic;
 using System.Net;
 using Microsoft.Azure.Cosmos;
 using System.Reflection.Metadata;
+<<<<<<< HEAD
 using System.Collections;
 using System.Collections.Concurrent;
 using Azure;
+=======
+>>>>>>> 08fc415ff562b93786de30ef5f65f4c624c04ce5
 
 namespace TheCloudShopsLoader
 {
@@ -68,8 +75,12 @@ namespace TheCloudShopsLoader
             await this.CreateContainerAsync();
 
             //run seed method to load initial data
+<<<<<<< HEAD
             //await this.AddItemsToContainerAsync();
             await this.updateOrderByID();
+=======
+            await this.AddItemsToContainerAsync();
+>>>>>>> 08fc415ff562b93786de30ef5f65f4c624c04ce5
         }
 
         /// <summary>
@@ -139,6 +150,7 @@ namespace TheCloudShopsLoader
         }
 
 
+<<<<<<< HEAD
         private async Task updateOrderByID()
         {
             //this.updateOrderByID1();
@@ -203,6 +215,8 @@ namespace TheCloudShopsLoader
 
         }
 
+=======
+>>>>>>> 08fc415ff562b93786de30ef5f65f4c624c04ce5
 
         /// <summary>
         /// Add Family items to the container

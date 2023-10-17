@@ -1,0 +1,16 @@
+After restoring, it's possible that for certain collections the consistent index may be rebuilding. You can check the status of the rebuild operation via the IndexTransformationProgress property.
+
+These settings are not restored:
+ - Firewall, VNET, Data plane RBAC or private endpoint settings.
+ - Consistency settings, by default - account is restored with session consistency.
+ - Stored procedures, triggers, UDFs.
+ - Role-based access control assignments. These will need to be re-assigned.
+
+Generate a report:
+ - Name of Database:
+ - Name of the container/s
+ - For each containers
+	- How many items are there?
+	- Partition Key
+	- Schema
+	- TTL

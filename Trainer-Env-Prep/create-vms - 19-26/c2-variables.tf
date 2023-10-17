@@ -34,7 +34,7 @@ variable "virtual_network_name" {
 
 variable "dns_name_prefix" {
   type = string
-  default = "huola"
+  default = "mkjuc"
 }
 
 variable "admin_username" {
@@ -58,5 +58,5 @@ variable "storage_account_type" {
 variable "vm_count" {
   description = "How many VMs"
   type = number
-  default = "1"
+  default = "10"
 }
